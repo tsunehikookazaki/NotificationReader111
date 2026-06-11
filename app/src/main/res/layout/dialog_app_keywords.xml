@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="このアプリ専用のフィルタ"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/sw_app_keyword_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ONにすると、このアプリには専用のキーワードのみが適用されます（全体のフィルタは無視されます）"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <EditText
+            android:id="@+id/et_app_keyword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="キーワードを入れる"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_app_add_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="追加"
+            style="?android:attr/buttonStyleSmall" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_app_keywords_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登録済み: なし"
+        android:textSize="14sp"
+        android:background="#F0F0F0"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btn_app_clear_keywords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全てクリア"
+        android:backgroundTint="#9E9E9E"
+        style="?android:attr/buttonStyleSmall" />
+
+</LinearLayout>

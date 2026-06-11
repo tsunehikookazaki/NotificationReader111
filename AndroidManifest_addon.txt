@@ -1,0 +1,40 @@
+<!-- AndroidManifest.xml に追加すべき設定 -->
+
+<!-- 1. 権限の設定 -->
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+<!-- 2. パッケージ可視性の設定（Android 11以上でアプリ一覧の取得やTTS連携に必要） -->
+<!-- <manifest> タグの直下、<application> タグの外に追加してください。 -->
+<queries>
+    <intent>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent>
+    <intent>
+        <action android:name="android.intent.action.TTS_SERVICE" />
+    </intent>
+</queries>
+
+<!-- 2. サービス宣言 -->
+<!-- <application> タグ内の末尾に追加してください。 -->
+<service
+    android:name=".NotificationReaderService"
+    android:label="通知読み上げサービス"
+    android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.service.notification.NotificationListenerService" />
+    </intent-filter>
+</service>
+
+<!-- 3. アビリティ（画面）の宣言 -->
+<!-- <application> タグ内の末尾（サービスの次など）に追加してください。 -->
+<activity
+    android:name=".HelpActivity"
+    android:label="使い方"
+    android:parentActivityName=".MainActivity">
+    <!-- 戻るボタンの動作をサポート -->
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
+</activity>
