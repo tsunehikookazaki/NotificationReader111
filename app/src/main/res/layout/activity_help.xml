@@ -27,16 +27,7 @@
             android:textColor="#E91E63"
             android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Android 13以降でアプリをインストールした場合、セキュリティ制限により「通知アクセス」の設定がグレーアウトして選べない（または拒否される）ことがあります。\n\nその場合は、以下の「制限付き設定を解除」する操作が必ず必要です。\n\n【解除の手順】\n1. このアプリを一度閉じ、スマホの【設定】アプリを開きます。\n2. 【アプリ】→【すべてのアプリを表示】→【NotiTificationReader】を選びます。\n3. 画面の右上にある【︙】（点3つのメニュー）をタップします。\n4. 【制限付き設定を許可】を選びます。\n5. 本人確認（指紋やパスコード）をします。\n6. アプリに戻り、改めて「通知アクセス設定を開く」からスイッチをONにしてください。"
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:textColor="#333333"
-            android:background="#FFF3E0"
-            android:padding="12dp"
-            android:layout_marginBottom="24dp" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -50,11 +41,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="通知アクセスが許可されていません　❌になっていたら、通知アクセス設定を開くボタンで、通知設定を開いてください。
-            \n許可されたアプリにNotiTificationReaderが無ければ、下の許可されてないアプリ一覧からNotiTificationReaderを選び、画面が変わったら下にスクロールして、通知へのアクセスを許可のボタンをクリック。
-            \nまた、画面が変わったら、下にスクロールして、”許可”をクリックしてください。通知へのアクセスを許可のボタンがONにたります。
-            \n戻るボタンで戻って下さい。許可されたアプリにNotiTificationReaderが追加されました。
-            \n戻るボタンで最初の画面に戻って下さい。通知アクセスが許可されています✅に変っています\n"
+            android:text="手順が多いので、この画面と、設定画面を交互に見ながら設定してください\n通知アクセスが許可されていません　❌になっていたら、\n
+1.スマートフォンの [設定] を開きます。\n
+[アプリ] をタップします。\n
+画面を下までスクロールし、[特別なアプリアクセス] をタップします。\n
+[デバイスとアプリの通知]（または [通知へのアクセス]）をタップします。\n
+NotifiCationReaderを探してタップします。\n
+（「アプリ情報」の画面が開きます）。\n
+画面の右上にある [︙]（縦に3つ並んだ点） をタップします。\n
+メニューから [制限付き設定を許可] をタップします。\n
+※スマートフォンに設定している暗証番号（PIN）や指紋認証での画面ロック解除を求められる場合があります。\n
+※機種によっては、右上の[︙]ではなく、アプリ情報画面の一番下に「制限付き設定を許可」という項目がある場合もあります。\n\n
+2.この操作を行った後、もう一度 [設定] ＞ [アプリ] ＞ [特別なアプリアクセス] ＞ [デバイスとアプリの通知] を開きます。\n
+NotifiCationReaderを選択すると、今度は [通知へのアクセスを許可] のスイッチがオンにできるようになっています。\n
+警告メッセージが表示されたら、内容を確認して [許可] をタップします。\n\n通知アクセス設定を開くボタンで、通知設定を開いてください。
+\n戻るボタンで戻って下さい。許可されたアプリにNotiTificationReaderが追加されました。
+\n３．戻るボタンでNotiTificationReaderの画面に戻って下さい。通知アクセスが許可されています✅に変っています\n"
             android:textSize="16sp"
             android:layout_marginBottom="8dp" />
 
